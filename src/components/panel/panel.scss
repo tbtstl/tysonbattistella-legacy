@@ -1,0 +1,30 @@
+@import "../../shared/styles/main";
+
+.panel {
+  padding: 2em;
+  background-color: $color-bg-secondary;
+
+  .panel-title {
+    text-decoration: underline;
+  }
+}
+
+.panel-list-item {
+  list-style: none;
+  cursor: pointer;
+
+  .description {
+    a, small {
+      color: $color-secondary;
+    }
+    display: inline;
+    padding-left: 1em;
+    opacity: 0;
+  }
+
+  &:hover{
+    .description {
+      opacity: 1;
+    }
+  }
+}

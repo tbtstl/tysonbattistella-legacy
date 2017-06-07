@@ -1,0 +1,32 @@
+@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/grid/_all";
+@import "~bulma/sass/components/level";
+@import "~bulma/sass/components/menu";
+
+.menu {
+  font-size: $size-normal;
+}
+
+.menu-list {
+  line-height: 1.25;
+
+  a {
+    border-radius: $radius-small;
+    color: $color-primary;
+    display: block;
+    padding: 0.5em 0.75em;
+    &:hover, &.is-active {
+      color: $color-accent;
+      background-color: $color-bg;
+    }
+  }
+
+  li {
+    list-style: none;
+
+    ul {
+      margin: 0.75em;
+      padding-left: 0.75em;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@import "variables";
+@import "bulmaOverride";
+
+body {
+  font-family: $font-stack;
+  background-color: $color-bg;
+  color: $color-primary;
+}
+
+.margin-1 {
+  margin: 1em;
+}
+
+// Bracket Links from https://tympanus.net/Development/CreativeLinkEffects/
+a.brackets {
+  color: $color-primary;
+  cursor: pointer;
+
+  &:before, &:after {
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+
+  &:before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(0.5em);
+    -moz-transform: translateX(0.5em);
+    transform: translateX(0.5em);
+  }
+
+  &:after {
+    margin-left: 10px;
+    content: ']';
+    transform: translateX(-0.5em);
+    -webkit-transform: translateX(-0.5em);
+    -moz-transform: translateX(-0.5em);
+  }
+
+  &:hover:before,
+  &:focus:before,
+  &.is-active:before,
+  &:hover:after,
+  &:focus:after,
+  &.is-active:after{
+    opacity: 1;
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+  }
+
+}
+
+
+.text-muted {
+  color: $color-muted;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+
+.pull-right {
+  float: right;
+}
