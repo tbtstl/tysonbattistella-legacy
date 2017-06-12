@@ -18,9 +18,11 @@ export class Panel extends React.Component{
         }
     }
 
-    handlePanelItemClicked(item){
+    handlePanelItemInteracted(item, clicked=true){
         return () => {
             this.setState({activeItem: item});
+
+            if (!clicked) return;
 
             if(item.target && !item.target.startsWith('mailto:')){
                 window.open(`http://${item.target}`, '_blank');
@@ -111,7 +113,7 @@ export class Panel extends React.Component{
 
                         <ul>
                             {this.renderPanelList.bind(this)().map((item, index)=>{
-                                return (<li className={listItemClass(item.name)} key={index} onMouseOver={this.handlePanelItemClicked.bind(this)(item)} onClick={this.handlePanelItemClicked.bind(this)(item)}>
+                                return (<li className={listItemClass(item.name)} key={index} onMouseOver={this.handlePanelItemInteracted.bind(this)(item, false)} onClick={this.handlePanelItemInteracted.bind(this)(item)}>
                                     <div className="columns">
                                         <div className="column is-2">
                                             <span className="text-muted"><small>{item.dateStr}</small></span>

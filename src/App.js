@@ -19,8 +19,8 @@ class App extends Component {
         const descriptionEl = document.getElementById('description');
         new TuringType(descriptionEl, 'Tyson Battistella is a web developer currently located on the south end of a ' +
             'small island on the west side of a large country in the north.', {
-            accuracy: 0.8,
-            interval: 30
+            accuracy: 0.9,
+            interval: 50
         })
     }
 
