@@ -23,9 +23,9 @@ export class Panel extends React.Component{
             this.setState({activeItem: item});
 
             if(item.target && !item.target.startsWith('mailto:')){
-                const win = window.open(`http://${item.target}`, '_blank');
+                window.open(`http://${item.target}`, '_blank');
             } else if (item.target && item.target.startsWith('mailto:')){
-                const win = window.open(item.target);
+                window.open(item.target);
             }
         };
     }
