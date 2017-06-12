@@ -219,10 +219,13 @@ module.exports = {
       // Remember to add the new extension(s) to the "file" loader exclusion list.
         {
           test: /\.scss$/,
-          use: [
-              require.resolve('css-loader'),
-              require.resolve('sass-loader')
-          ]
+          use: [{
+              loader: 'style-loader'
+          }, {
+            loader: 'css-loader'
+          }, {
+            loader: 'sass-loader'
+          }]
         }
     ],
   },
