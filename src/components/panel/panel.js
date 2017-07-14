@@ -39,7 +39,7 @@ export class Panel extends React.Component{
             case LEARN:
                 return 'A timeline of me learning new things 🎓';
             case CONTACT:
-                return 'Some ways to keep in touch. (If you offer 🍺 or ☕️ I\'ll get back to you ASAP).'
+                return 'Some ways to keep in touch.';
             default:
                 return '';
         }
