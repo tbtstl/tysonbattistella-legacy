@@ -57,6 +57,8 @@ export class Panel extends React.Component{
                 ];
             case LEARN:
                 return [
+                    {dateStr: '2017', name: 'Introduction to Artificial Intelligence', institution, 'University of Victoria'},
+                    {dateStr: '2017', name: 'Data Mining', institution, 'University of Victoria'},
                     {dateStr: '2017', name: 'Deep Learning Foundations', institution: 'Udacity'},
                     {dateStr: '2017', name: 'Software Evolution', institution: 'University of Victoria'},
                     {dateStr: '2017', name: 'Requirements Engineering', institution: 'University of Victoria'},
